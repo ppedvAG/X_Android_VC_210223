@@ -62,6 +62,10 @@ namespace X_Android
             Intent expliziterIntent = new Intent(this, typeof(ShowPictureActivity));
             //Zuweisung des Click-Events
             Btn_Picture.Click += (s, e) => StartActivity(expliziterIntent);
+
+            //Todo-Übung
+            Button btnTodo = FindViewById<Button>(Resource.Id.activity_main_Btn_Todo);
+            btnTodo.Click += (s, e) => StartActivity(new Intent(this, typeof(TodoActivity)));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
